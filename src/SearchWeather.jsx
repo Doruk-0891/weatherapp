@@ -6,7 +6,7 @@ const SearchWeather = () => {
     const [isSearching, setIsSearching] = useState(false);
 
     const fetchWeatherDetails = (city) => {
-        const url = `http://api.weatherapi.com/v1/current.json?key=efdbd86eceda4904a4c93851243004&q=${city}&aqi=no`;
+        const url = `https://api.weatherapi.com/v1/current.json?key=efdbd86eceda4904a4c93851243004&q=${city}&aqi=no`;
         fetch(url).then(response => response.json()).then(jsonResponse => setWeatherDetails(jsonResponse)).catch(err => alert('Failed to fetch weather data')).finally(() => setIsSearching(false));
         
     }
